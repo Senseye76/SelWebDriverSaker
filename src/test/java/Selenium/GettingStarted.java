@@ -15,17 +15,17 @@ public class GettingStarted {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("http://www.google.com/");
+        driver.get("https://duckduckgo.com/");
 
-        Thread.sleep(5000);  // Let the user actually see something!
+        Thread.sleep(2000);  // Let the user actually see something!
 
-        WebElement searchBox = driver.findElement(By.id("#inputWrapper"));
+        WebElement searchBox = driver.findElement(By.cssSelector("[name='q']"));
 
-        searchBox.sendKeys("ChromeDriver");
+        searchBox.sendKeys("Testing duckduckgo");
 
         searchBox.submit();
 
-        Thread.sleep(5000);  // Let the user actually see something!
+        Thread.sleep(2000);  // Let the user actually see something!
 
         driver.quit();
 
